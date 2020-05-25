@@ -11,4 +11,4 @@
 |----|----|----|
 |2020/05/24|Classical|[KeyLogger](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/KeyLogger)|
 |2020/05/25|Classical|[BFS](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/bfs/java)|
-|2020/05/26|Classical|[K-mean Clustering|
+|2020/05/26|Classical|K-mean Clustering|
