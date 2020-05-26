@@ -121,7 +121,7 @@ class Kmeans:
 					dim_avg += cluster_table[idx][num][dim]
 
 				# get avg
-				dim_avg = dim_avg / len(cluster_data_list[idx])
+				dim_avg = dim_avg / len(cluster_table[idx])
 				
 				# save_at updated point
 				updated_point.append(dim_avg)
@@ -162,13 +162,16 @@ class Kmeans:
 		# first maximization
 		cluster_data_list = self.maximization(cluster_data_list, expectation_table)
 
-		while is_this_equal(cluster_data_buf_list, cluster_data_list) == False:
+		# test
+		counter = 1
+
+		while (is_this_equal(cluster_data_buf_list, cluster_data_list) == False):
+
 			cluster_data_buf_list = cluster_data_list
 			# expectation
 			expectation_table = self.expectation(cluster_data_list)
 			# maximization
 			cluster_data_list = self.maximization(cluster_data_list, expectation_table)
+			counter += 1
 
 		return (cluster_data_list, expectation_table)
-
-		

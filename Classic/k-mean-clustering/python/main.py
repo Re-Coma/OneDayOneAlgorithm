@@ -15,10 +15,7 @@ def make_random_data(size, dimension, _max, _min):
 if __name__ == "__main__":
 	DIMENSION = 2
 	DATA_SIZE =10 
-	MAX = 10
-	MIN = -10
 	k = Kmeans(DIMENSION, \
-			make_random_data(DATA_SIZE, DIMENSION, MAX, MIN))
-	result = k(3)
+			make_random_data(DATA_SIZE, DIMENSION, -10, 4) + make_random_data(20, DIMENSION, 8, 14))
+	result = k(2)
 	print(result[0])
-	print(result[1])
