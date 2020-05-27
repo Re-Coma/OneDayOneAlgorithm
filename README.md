@@ -14,4 +14,3 @@
 |2020/05/26|Classical|[K-mean Clustering](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/k-mean-clustering)|Python|초기화 관련 문제 해결 필요, [Test Module](https://github.com/Re-Coma/OneDayOneAlgorithm/blob/master/Classic/k-mean-clustering/testcase.ipynb)|
 |2020/05/27|Classical|[KMP](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/kms)|Javascript|텍스트 출처:Wikipedia|
 |2020/05/28|Classical|Levenshtein Algorithm|Java|X|
-|2020/05/29|Special|Krumhansl-Schmuckler key-finding algorithm|Python|Music21 모듈 패키지 필요|
