@@ -14,5 +14,5 @@
 |2020/05/26|Classical|[K-mean Clustering](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/k-mean-clustering)|Python|초기화 관련 문제 해결 필요, [Test Module](https://github.com/Re-Coma/OneDayOneAlgorithm/blob/master/Classic/k-mean-clustering/testcase.ipynb)|
 |2020/05/27|Classical|[KMP](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/kms)|Javascript|텍스트 출처:Wikipedia|
 |2020/05/29|Classical|[Levenshtein Algorithm](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/levenstein/)|Java, C|X|
-|2020/05/31|Classical|Key Finding Algorithm|C++, Java|X|
+|2020/05/31|Special|Key Finding Algorithm|C++, Java|X|
 |2020/06/01|Classical|Quick Sort|C|X|
