@@ -17,5 +17,5 @@
 |2020/05/31|__Special__|[(Krumhansl-Schmuckler) Key Finding Algorithm](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Special/key-finding/)|Java|악보의 미디 데이터를 이용해 메이저 마이너 코드를 예측하는 알고리즘|
 |2020/06/01|Classical|[Quick Sort](https://github.com/Re-Coma/OneDayOneAlgorithm/blob/master/Classic/sort/quick-sort/quick_sort.c)|C|X|
 |2020/06/01|Classical|[DFS](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/dfs/)|C++|X|
-|2020/08/06|Classical|[Heap]|C|X|
+|2020/08/06|Classical|[Heap](https://github.com/ReicomA/OneDayOneAlgorithm/tree/master/Classic/heap/c)|C|X|
 |2020/08/07|Classical|[Heap + linked Array Version]|C|X|
