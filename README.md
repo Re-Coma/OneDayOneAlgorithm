@@ -4,8 +4,7 @@
 * Classical: 일반
 * Special: 좀 특별하거나 잘 알려지지 않은 알고리즘 위주
 * Reinforce: 기존에 구현한 알고리즘 세분화 및 성능 테스트
-* Extended: 프로그램화
-* bakjoon: 백준 알고리즘 문제
+* Extended: 프로그램, API화
 ### List
 |날짜|항목|이름|언어|비고|
 |----|----|----|---|---|
@@ -18,4 +17,4 @@
 |2020/06/01|Classical|[Quick Sort](https://github.com/Re-Coma/OneDayOneAlgorithm/blob/master/Classic/sort/quick-sort/quick_sort.c)|C|X|
 |2020/06/01|Classical|[DFS](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/dfs/)|C++|X|
 |2020/08/06|Classical|[Heap](https://github.com/ReicomA/OneDayOneAlgorithm/tree/master/Classic/heap/c)|C|X|
-|2020/08/07|Classical|[Heap + linked Array Version]|C|X|
+|2020/08/07|Extended|[우선순위 큐 API]|C, Java|X|
