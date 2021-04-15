@@ -54,7 +54,6 @@ def generate_chord(type, chord):
         return new_format
 
 def __change_to_real_value(chord):
-    # 정확한 으뜸음 계산을 위해 값 조정
     if chord[INDEX_KEYNOTE] > chord[INDEX_KEYNOTE+1]:
         chord[INDEX_KEYNOTE+1] += 12
         chord[INDEX_KEYNOTE+2] += 12
@@ -64,7 +63,7 @@ def __change_to_real_value(chord):
 def __reset_chord_value(chord):
     # __change_to_real_value의 반대
     for idx in range(0, len(chord)):
-        chord[idx] %= 12
+        chord[idx] = chord[idx] % 12
 
 def __check_major_or_minor(chord):
 
@@ -112,21 +111,135 @@ def parrel(chord):
         return False
 
 def relative(chord):
+
     __change_to_real_value(chord)
     chord_type = __check_major_or_minor(chord)
 
     if chord_type == IS_MAJOR:
-        pass
+        """5음을 2반음 올린 다음 5음을 맨 앞으로 이동해서 으뜸으로 설정
+            [0, 4, 7] -> [0, 4, 9] -> [9, 0, 4]
+        """
+        chord[INDEX_KEYNOTE+2] += 2
+        tmp_note = chord[INDEX_KEYNOTE+2]
+        del chord[INDEX_KEYNOTE+2]
+        chord.insert(INDEX_KEYNOTE, tmp_note)
+        __reset_chord_value(chord)
+
+        return True
+
+    elif chord_type == IS_MINOR:
+        """
+            으뜸음을 2반음 내린 다음 으뜸음을 5음 위치로 이동시켜서 3음을 으뜸으로 설정
+            [0, 3, 7] -> [10, 3, 7] -> [3, 7, 10]
+        """
+        chord[INDEX_KEYNOTE] -= 2
+        tmp_note = chord[INDEX_KEYNOTE]
+        del chord[INDEX_KEYNOTE]
+        chord.append(tmp_note)
+        __reset_chord_value(chord)
+
+        return True
+    else:
+        return False
 
 def leading_tone(chord):
-    pass
+
+    __change_to_real_value(chord)
+    chord_type = __check_major_or_minor(chord)
+
+    if chord_type == IS_MAJOR:
+        """
+            으뜸음을 1반음 내린 다음, 3음을 으뜸음으로 설정
+            [0, 4, 7] -> [11, 4, 7] -> [4, 7, 11]
+        """
+        chord[INDEX_KEYNOTE] -= 1
+        tmp_note = chord[INDEX_KEYNOTE]
+        del chord[INDEX_KEYNOTE]
+        chord.append(tmp_note)
+        __reset_chord_value(chord)
+
+        return True
+    
+    elif chord_type == IS_MINOR:
+        """
+            5음을 1반음 올린 다음 5음을 으뜸음으로 설정
+            [0, 3, 7] -> [0, 3, 8] -> [8, 0, 3]
+        """
+        chord[INDEX_KEYNOTE+2] += 1
+        tmp_note = chord[INDEX_KEYNOTE+2]
+        del chord[INDEX_KEYNOTE+2]
+        chord.insert(INDEX_KEYNOTE, tmp_note)
+        __reset_chord_value(chord)
+
+        return True
+    else:
+        return False
 
 
 """ MUSIC FUNCTION """
 
 if __name__ == "__main__":
-    major_chord_list = [generate_chord("major", idx) for idx in range(0, 12)]
-    for chord in major_chord_list:
-        parrel(chord)
-        print(chord)
 
+    # Parrel
+    major_chord_list = [generate_chord("major", idx) for idx in range(0, 12)]
+    minor_chord_list = [generate_chord("minor", idx) for idx in range(0, 12)]
+
+    print("PARREL - MAJOR")
+    print("================================")
+    for chord in major_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        parrel(chord)
+        print(f"{before} ==> {chord}")
+
+    print("")
+    print("PARREL - MINOR")
+    print("================================")
+    for chord in minor_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        parrel(chord)
+        print(f"{before} ==> {chord}")
+
+
+
+    # Relative    
+    major_chord_list = [generate_chord("major", idx) for idx in range(0, 12)]
+    minor_chord_list = [generate_chord("minor", idx) for idx in range(0, 12)]
+
+    print("")
+    print("RELATIVE - MAJOR")
+    print("================================")
+    for chord in major_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        relative(chord)
+        print(f"{before} ==> {chord}")
+
+        
+    print("")
+    print("RELATIVE - MINOR")
+    print("================================")
+    for chord in minor_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        relative(chord)
+        print(f"{before} ==> {chord}")
+        
+
+
+    # Leading Tone
+    major_chord_list = [generate_chord("major", idx) for idx in range(0, 12)]
+    minor_chord_list = [generate_chord("minor", idx) for idx in range(0, 12)]
+
+    print("")
+    print("LEADING TONE - MAJOR")
+    print("================================")
+    for chord in major_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        leading_tone(chord)
+        print(f"{before} ==> {chord}")
+        
+    print("")
+    print("LEADING TONE - MINOR")
+    print("================================")
+    for chord in minor_chord_list:
+        before = [chord[idx] for idx in range(0, len(chord))]
+        leading_tone(chord)
+        print(f"{before} ==> {chord}")
