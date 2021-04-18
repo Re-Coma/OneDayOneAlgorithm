@@ -1,5 +1,4 @@
 # OneDayOneAlgorithm
-1일 1알고리즘
 
 * Classical: 일반
 * **Special**: 좀 특별하거나 잘 알려지지 않은 알고리즘 위주
