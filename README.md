@@ -1,6 +1,7 @@
 # AlgorithmBox
 
 * Classical: 일반
+* Challenge: 프로젝트를 진행하면서 마주친 알고리즘 문제들
 * **Special**: 좀 특별하거나 잘 알려지지 않은 알고리즘 위주
 * ***Extended***: 프로그램, API화
 ### List
@@ -16,4 +17,5 @@
 |2020/06/01|Classical|[DFS](https://github.com/Re-Coma/OneDayOneAlgorithm/tree/master/Classic/dfs/)|C++|X|
 |2020/08/06|Classical|[Heap](https://github.com/ReicomA/OneDayOneAlgorithm/tree/master/Classic/heap/c)|C|X|
 |2021/04/16|__Special__|[Tonnetz(Neo-Riemannian Theory)](Special/tonnetz/tonnetz.py)|Python|표준: 3성음(Major, Minor)만 해당|
-|2021/05/06|Classical|[Timsort](Classic/sort/timsort)|Ruby|진행중|
+|2021/05/13|Challenge|[Split String](Challenge/split)|Go|2개 이상의 Delimiter를 걸러낼 수 있고 Delimiter를 추가한 리스트 출력 가능|
+|2021/06/XX|Classical|[Timsort](Classic/sort/timsort)|Ruby|진행중|
