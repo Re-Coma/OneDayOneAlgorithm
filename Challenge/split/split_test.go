@@ -15,7 +15,7 @@ func ExampleTest() {
 		TestCase{"helloworld>>>>", []string{">", "<"}, true},
 		TestCase{"helloworld>>>>", []string{">>", "><", ">"}, true},
 		TestCase{"helloworld>>>>", []string{">>"}, true},
-		TestCase{"helloworld>>>>>", []string{">>>", ">"}, true},
+		TestCase{"helloworld>><>>", []string{"><", ">", ">>"}, true},
 		TestCase{"ls -al /dev | grep example >>log.txt &", []string{">", ">>", "<", "<<", "|", "&", " "}, true},
 		TestCase{"hello world", []string{" "}, false},
 	}
@@ -32,7 +32,7 @@ func ExampleTest() {
 	// helloworld:>:>:>:>:
 	// helloworld:>>:>>:
 	// helloworld:>>:>>:
-	// helloworld:>>>:>:>:
+	// helloworld:>>:<:>>:
 	// ls: :-al: :/dev: :|: :grep: :example: :>>:log.txt: :&:
 	// hello:world:
 }
