@@ -105,12 +105,14 @@ func split(target string, delimiterList []string, doRemainDelimiter bool) []stri
 					
 				}
 				log.Print(newCdIdxList)
+				log.Print(cursor)
 				log.Print("======================")
 
 				
 				// newCdIdxList의 길이가 하나밖에 없다 == 같은 길이대의 Delimiter가 없다
 				if len(newCdIdxList) == 1 {
 					if len(delimiterListRune[newCdIdxList[0]]) == strLength-1 {
+						log.Print("down")
 						cdIndexList = newCdIdxList
 						break
 					} else {
