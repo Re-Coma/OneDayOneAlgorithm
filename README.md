@@ -18,4 +18,4 @@
 |2020/08/06|Classical|[Heap](https://github.com/ReicomA/OneDayOneAlgorithm/tree/master/Classic/heap/c)|C|X|
 |2021/04/16|__Special__|[Tonnetz(Neo-Riemannian Theory)](Special/tonnetz/tonnetz.py)|Python|표준: 3성음(Major, Minor)만 해당|
 |2021/07/08|Challenge|[Split String](Challenge/split)|Go|2개 이상의 Delimiter를 걸러낼 수 있고 Delimiter를 추가한 리스트 출력 가능|
-|2021/07/08|Classical|[LCS](Classic/lcs/lcs.py)|Python|X|
+|2021/07/19|Classical|[Trie](Classic/trie/trie.py)|Python|중복 입력 불가, 영단어 출처: https://github.com/dwyl/english-words/blob/master/words_alpha.txt|
